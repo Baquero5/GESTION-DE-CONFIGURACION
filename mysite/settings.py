@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-_jp+i(q1%hu^84h%ft$(27t*2%m+)@w+b_q0wan69kb3m!=+y0
 DEBUG = True
 
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh']
+
 
 # Application definition
 
@@ -77,14 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Make sure to install mysqlclient: pip install mysqlclient
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Django_project',         # Update this to your database name
-        'USER': 'User_1',         # Update this to your database user
-        'PASSWORD': '12345', # Update this to your database password
-        'HOST': 'localhost',            # Set to your MySQL host, usually 'localhost'
-        'PORT': '5432',                 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
